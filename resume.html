@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Name - Contact</title>
+  <title>Your Name - Resume</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -34,83 +34,111 @@
         <h1 class="text-xl font-serif font-semibold text-secondary">Your Name</h1>
         <div class="hidden md:flex space-x-8">
           <a href="index.html" class="nav-link text-gray-700 font-medium">Home</a>
-          <a href="about.html" class="nav-link text-gray-700 font-medium">About</a>
-          <a href="portfolio.html" class="nav-link text-gray-700 font-medium">Portfolio</a>
-          <a href="resume.html" class="nav-link text-gray-700 font-medium">Resume</a>
-          <a href="contact.html" class="nav-link text-primary font-medium">Contact</a>
+          <a href="resume.html" class="nav-link text-primary font-medium">Resume</a>
         </div>
       </div>
     </div>
   </nav>
 
-  <!-- Contact Section -->
-  <section class="min-h-screen py-20 bg-white pt-28">
+  <!-- Resume Section -->
+  <section class="min-h-screen py-20 bg-gray-50 pt-28">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-serif font-semibold text-secondary mb-6">Get In Touch</h2>
-        <p class="text-xl text-gray-600">Let's discuss how we can work together</p>
+      <!-- Header -->
+      <div class="text-center mb-12">
+        <h2 class="text-4xl md:text-5xl font-serif font-semibold text-secondary mb-4">Resume</h2>
+        <a href="resume.pdf" class="bg-primary text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-600 transition duration-300 inline-block">
+          <i class="fas fa-download mr-2"></i>Download Resume
+        </a>
       </div>
-      
-      <div class="grid md:grid-cols-2 gap-12">
-        <!-- Contact Form -->
-        <div class="bg-gray-50 rounded-lg p-8 shadow">
-          <h3 class="text-2xl font-serif font-semibold text-secondary mb-6">Send Me a Message</h3>
-          <form action="#" method="POST" class="space-y-6">
-            <div>
-              <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Name</label>
-              <input type="text" id="name" name="name" required 
-                     class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary">
-            </div>
-            <div>
-              <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
-              <input type="email" id="email" name="email" required 
-                     class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary">
-            </div>
-            <div>
-              <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
-              <textarea id="message" name="message" rows="5" required 
-                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary"></textarea>
-            </div>
-            <button type="submit" 
-                    class="w-full bg-primary text-white py-3 rounded-lg font-medium hover:bg-blue-600 transition duration-300">
-              Send Message
-            </button>
-          </form>
-          <p class="text-sm text-gray-500 mt-4">
-            (Integrate with Formspree, Formsubmit, or another service for live functionality)
+
+      <!-- Resume Content -->
+      <div class="bg-white rounded-lg shadow-lg p-10 space-y-12">
+        
+        <!-- About Me / Summary -->
+        <div>
+          <h3 class="text-2xl font-serif font-semibold text-secondary mb-4">Professional Summary</h3>
+          <p class="text-gray-700 leading-relaxed">
+            Motivated professional with a strong background in technology, business, and creative projects. Experienced in managing projects, analyzing data, and working with cross-functional teams to deliver innovative solutions. Strong interest in bridging the gap between technical expertise and strategic business goals. 
           </p>
         </div>
-        
-        <!-- Contact Info -->
-        <div class="space-y-8">
-          <div class="bg-gray-50 rounded-lg p-8 shadow">
-            <h3 class="text-2xl font-serif font-semibold text-secondary mb-6">Connect With Me</h3>
-            <div class="space-y-4">
-              <a href="mailto:your.email@example.com" class="flex items-center text-gray-700 hover:text-primary transition">
-                <i class="fas fa-envelope text-xl mr-4"></i>
-                your.email@example.com
-              </a>
-              <a href="https://linkedin.com/in/yourprofile" target="_blank" class="flex items-center text-gray-700 hover:text-primary transition">
-                <i class="fab fa-linkedin text-xl mr-4"></i>
-                LinkedIn Profile
-              </a>
-              <a href="https://github.com/yourusername" target="_blank" class="flex items-center text-gray-700 hover:text-primary transition">
-                <i class="fab fa-github text-xl mr-4"></i>
-                GitHub Profile
-              </a>
+
+        <!-- Education -->
+        <div>
+          <h3 class="text-2xl font-serif font-semibold text-secondary mb-4">Education</h3>
+          <div class="space-y-4">
+            <div>
+              <h4 class="font-semibold text-gray-800">Bachelor of Science in Business Analytics</h4>
+              <p class="text-gray-600">XYZ University — Class of 2024</p>
+            </div>
+            <div>
+              <h4 class="font-semibold text-gray-800">Certifications</h4>
+              <ul class="list-disc list-inside text-gray-600">
+                <li>Google Data Analytics Certificate</li>
+                <li>AWS Cloud Practitioner</li>
+              </ul>
             </div>
           </div>
-          
-          <div class="bg-primary text-white rounded-lg p-8 shadow">
-            <h3 class="text-xl font-serif font-semibold mb-4">Let's Collaborate</h3>
-            <p class="mb-4">
-              I’m always interested in discussing new opportunities, innovative projects, and potential collaborations.
-            </p>
-            <p class="text-blue-100">
-              Whether you're looking for a consultant, team member, or project partner, I’d love to hear about your vision.
-            </p>
+        </div>
+
+        <!-- Experience -->
+        <div>
+          <h3 class="text-2xl font-serif font-semibold text-secondary mb-4">Experience</h3>
+          <div class="space-y-6">
+            <div>
+              <h4 class="font-semibold text-gray-800">Business Analyst Intern</h4>
+              <p class="text-gray-600 italic">ABC Consulting Firm | June 2023 – Aug 2023</p>
+              <ul class="list-disc list-inside text-gray-700 mt-2">
+                <li>Conducted market research and created dashboards using Tableau and SQL.</li>
+                <li>Supported project managers by analyzing workflows and recommending process improvements.</li>
+                <li>Presented findings to senior leadership, contributing to a 10% cost reduction initiative.</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-semibold text-gray-800">Operations Coordinator</h4>
+              <p class="text-gray-600 italic">Startup XYZ | Jan 2022 – May 2023</p>
+              <ul class="list-disc list-inside text-gray-700 mt-2">
+                <li>Managed day-to-day operations for a 10-member startup team.</li>
+                <li>Oversaw vendor relationships, improving turnaround times by 15%.</li>
+                <li>Designed workflow processes and supported financial reporting.</li>
+              </ul>
+            </div>
           </div>
         </div>
+
+        <!-- Skills -->
+        <div>
+          <h3 class="text-2xl font-serif font-semibold text-secondary mb-4">Skills</h3>
+          <div class="grid md:grid-cols-2 gap-8">
+            <div>
+              <h4 class="font-semibold text-gray-800 mb-2">Technical Skills</h4>
+              <div class="flex flex-wrap gap-2">
+                <span class="bg-primary text-white px-3 py-1 rounded-full text-sm">Python</span>
+                <span class="bg-primary text-white px-3 py-1 rounded-full text-sm">JavaScript</span>
+                <span class="bg-primary text-white px-3 py-1 rounded-full text-sm">SQL</span>
+                <span class="bg-primary text-white px-3 py-1 rounded-full text-sm">Tableau</span>
+                <span class="bg-primary text-white px-3 py-1 rounded-full text-sm">AWS</span>
+              </div>
+            </div>
+            <div>
+              <h4 class="font-semibold text-gray-800 mb-2">Professional Skills</h4>
+              <ul class="space-y-2 text-gray-700">
+                <li>✔ Strategic Problem Solving</li>
+                <li>✔ Leadership & Team Management</li>
+                <li>✔ Cross-functional Communication</li>
+                <li>✔ Agile Project Management</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Professional Goals -->
+        <div>
+          <h3 class="text-2xl font-serif font-semibold text-secondary mb-4">Professional Goals</h3>
+          <p class="text-gray-700 leading-relaxed">
+            Seeking opportunities in business analytics, operations, and technology management. Passionate about using data and innovative tools to improve decision-making and create scalable business strategies. Interested in industries that combine technology and customer experience, such as automotive innovation, tech consulting, and digital product development.
+          </p>
+        </div>
+
       </div>
     </div>
   </section>
