@@ -178,28 +178,22 @@
 
       <!-- Masonry Gallery -->
       <div id="gallery-grid" class="masonry-grid">
-        <!-- Belongs to Supercars -->
         <div class="masonry-item supercars">
           <div class="glass-morphism rounded-2xl overflow-hidden shadow-lg gallery-item">
             <img src="images/car46.jpg" alt="Ferrari Supercar" class="w-full h-auto object-cover">
           </div>
         </div>
-
-        <!-- Belongs to Details -->
         <div class="masonry-item details">
           <div class="glass-morphism rounded-2xl overflow-hidden shadow-lg gallery-item">
             <img src="images/car40.jpg" alt="Wheel Detail Shot" class="w-full h-auto object-cover">
           </div>
         </div>
-
-        <!-- General photo (All Photos only, no category) -->
         <div class="masonry-item">
           <div class="glass-morphism rounded-2xl overflow-hidden shadow-lg gallery-item">
-            <img src="images/car41.jpg" alt="General Car Photography" class="w-full h-auto object-cover">
+            <img src="images/car41.jpg" alt="Automotive Photography" class="w-full h-auto object-cover">
           </div>
         </div>
-
-        <!-- Add the rest of your images with .supercars, .details, or no class -->
+        <!-- Add the rest of your images with .supercars or .details -->
       </div>
 
       <!-- Albums Grid -->
@@ -267,7 +261,6 @@
         if (filter === 'all') {
           albumsGrid.classList.add('hidden');
           galleryGrid.classList.remove('hidden');
-          // Show everything, regardless of category
           galleryGrid.querySelectorAll('.masonry-item').forEach(i => i.style.display = 'block');
         } else if (filter === 'albums') {
           galleryGrid.classList.add('hidden');
@@ -275,16 +268,8 @@
         } else {
           albumsGrid.classList.add('hidden');
           galleryGrid.classList.remove('hidden');
-          // Show only matching category
           galleryGrid.querySelectorAll('.masonry-item').forEach(i => {
-            if (i.classList.contains(filter)) {
-              i.style.display = 'block';
-            } else if (!i.classList.contains('supercars') && !i.classList.contains('details')) {
-              // General photos should hide when specific filter is chosen
-              i.style.display = 'none';
-            } else {
-              i.style.display = 'none';
-            }
+            i.style.display = i.classList.contains(filter) ? 'block' : 'none';
           });
         }
       });
