@@ -6,6 +6,54 @@
   <title>Automotive Photography - Rahul Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
+  <!-- Lightbox Overlay -->
+  <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center hidden z-50">
+    <button id="close-lightbox" class="absolute top-5 right-5 text-white text-3xl font-bold">&times;</button>
+    <img id="lightbox-img" src="" alt="Expanded view" class="max-h-[90%] max-w-[90%] rounded-lg shadow-lg transform transition-transform duration-200">
+  </div>
+
+  <script>
+    // Select all gallery images
+    const galleryImages = document.querySelectorAll("section img");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const closeLightbox = document.getElementById("close-lightbox");
+
+    let scale = 1;
+
+    // Open lightbox
+    galleryImages.forEach(img => {
+      img.addEventListener("click", () => {
+        lightbox.classList.remove("hidden");
+        lightboxImg.src = img.src;
+        scale = 1; // reset zoom
+        lightboxImg.style.transform = "scale(1)";
+      });
+    });
+
+    // Close lightbox on X button or background click
+    closeLightbox.addEventListener("click", () => {
+      lightbox.classList.add("hidden");
+    });
+
+    lightbox.addEventListener("click", (e) => {
+      if (e.target === lightbox) {
+        lightbox.classList.add("hidden");
+      }
+    });
+
+    // Zoom functionality with mouse wheel
+    lightboxImg.addEventListener("wheel", (e) => {
+      e.preventDefault();
+      if (e.deltaY < 0) {
+        scale += 0.1; // zoom in
+      } else {
+        scale = Math.max(1, scale - 0.1); // zoom out but not smaller than original
+      }
+      lightboxImg.style.transform = `scale(${scale})`;
+    });
+  </script>
+
 <body class="bg-gray-50 text-gray-900">
 
   <!-- Navbar (reuse same as portfolio.html) -->
@@ -42,7 +90,6 @@
       <img src="images/car40.jpg" alt="Car 40" class="w-full rounded-lg shadow-md hover:opacity-90 transition">
       <img src="images/car39.jpg" alt="Car 39" class="w-full rounded-lg shadow-md hover:opacity-90 transition">
       <img src="images/car47.jpg" alt="Car 38" class="w-full rounded-lg shadow-md hover:opacity-90 transition">
-      <img src="images/car38.jpg" alt="Car 38" class="w-full rounded-lg shadow-md hover:opacity-90 transition">
       <img src="images/car37.jpg" alt="Car 37" class="w-full rounded-lg shadow-md hover:opacity-90 transition">
       <img src="images/car36.jpg" alt="Car 36" class="w-full rounded-lg shadow-md hover:opacity-90 transition">
       <img src="images/car35.jpg" alt="Car 35" class="w-full rounded-lg shadow-md hover:opacity-90 transition">
@@ -65,7 +112,6 @@
       <img src="images/car18.jpg" alt="Car 18" class="w-full rounded-lg shadow-md hover:opacity-90 transition">
       <img src="images/car17.jpg" alt="Car 17" class="w-full rounded-lg shadow-md hover:opacity-90 transition">
       <img src="images/car16.jpg" alt="Car 16" class="w-full rounded-lg shadow-md hover:opacity-90 transition">
-      <img src="images/car15.jpg" alt="Car 15" class="w-full rounded-lg shadow-md hover:opacity-90 transition">
       <img src="images/car14.jpg" alt="Car 14" class="w-full rounded-lg shadow-md hover:opacity-90 transition">
       <img src="images/car13.jpg" alt="Car 13" class="w-full rounded-lg shadow-md hover:opacity-90 transition">
       <img src="images/car12.jpg" alt="Car 12" class="w-full rounded-lg shadow-md hover:opacity-90 transition">
